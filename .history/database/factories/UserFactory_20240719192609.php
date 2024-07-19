@@ -42,4 +42,10 @@ class UserFactory extends Factory
         ]);
     }
 
+
+    {
+        return $this->is_admin(fn (array $attributes) => [
+            'email_verified_at' => null,
+        ]);
+    }
 }

@@ -42,4 +42,11 @@ class UserFactory extends Factory
         ]);
     }
 
+
+    public function is_admin(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'is_' => null,
+        ]);
+    }
 }
