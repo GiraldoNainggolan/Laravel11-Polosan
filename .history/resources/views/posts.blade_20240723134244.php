@@ -8,10 +8,10 @@
             </a>
             <div>
                 By
-                <a href="/authors/{{ $post->author->username }}"
-                    class="hover:underline text-base text-gray-500">{{ $post->author->name }}</a>
+                <a href="/authors/{{ $post->author->username }}" class="hover:underline"
+                    class="text-base text-gray-500">{{ $post->author->name }}</a>
                 in
-                <a href="#" class=" hover:underline text-base text-gray-500">Web Programming</a> |
+                <a href="#" class=" hover:underline">Web Programming</a> |
                 {{ $post->created_at->format('j F Y') }}
             </div>
             <p class="my-4 font-light">

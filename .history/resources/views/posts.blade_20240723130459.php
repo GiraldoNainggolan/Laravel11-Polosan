@@ -6,12 +6,11 @@
             <a href="/posts/{{ $post['slug'] }}" class="hover:underline">
                 <h2 class="mb-1 text-3xl tracking-tight text-gray-900">{{ $post['title'] }}</h2>
             </a>
-            <div>
+            <div class="text-base text-gray-500 ">
                 By
-                <a href="/authors/{{ $post->author->username }}"
-                    class="hover:underline text-base text-gray-500">{{ $post->author->name }}</a>
-                in
-                <a href="#" class=" hover:underline text-base text-gray-500">Web Programming</a> |
+                <a href="/authors/{{ $post->author->id }}" hover:underline>{{ $post->author->name }}</a>
+                
+                <a href="/authors/{{ $post->author->id }}" hover:underline>{{ $post->author->name }}</a> |
                 {{ $post->created_at->format('j F Y') }}
             </div>
             <p class="my-4 font-light">
