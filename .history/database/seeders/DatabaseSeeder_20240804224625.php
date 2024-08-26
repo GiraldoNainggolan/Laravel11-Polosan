@@ -25,7 +25,14 @@ class DatabaseSeeder extends Seeder
         // ]);
 
 
-
+        $giraldo = User::create([
+            'name' => 'Giraldo Nainggolan',
+            'username' => 'giraldo',
+            'email' => 'giraldonainggolan@gmail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('password'),
+            'remember_token' => Str::random(10)
+        ]);
 
         // Category::create([
         //     'name' => 'Web Design',
@@ -39,10 +46,11 @@ class DatabaseSeeder extends Seeder
         //     'slug' => 'judul-artikel-1',
         //     'body' => 'Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi.'
         // ]);
-        $this->call([CategorySeeder::class, UserSeeder::class]);
+
         Post::factory(100)->recycle([
-            Category::all(),
-            User::all()
+            Category::factory(3)->create(),
+            $giraldo,
+            User::factory(5)->create()
         ])->create();
     }
 }
