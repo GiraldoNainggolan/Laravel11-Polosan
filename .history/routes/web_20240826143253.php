@@ -12,25 +12,24 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('about', ['name' => 'Giraldo Stevanus Nainggolan', 'title' => 'Contact']);
+    return view('about', ['nama' => 'Giraldo Stevanus Nainggolan', 'title' => 'Page Blog']);
 });
 
 Route::get('/posts', function () {
-    $posts = Post::with(['author', 'category'])->latest()->get();
-    return view('posts', ['title' => 'Page Blog', 'posts' => $posts]);
+    $posts
+    return view('posts', ['title' => 'Page Blog', 'posts' => Post::all()]);
 });
 
 Route::get('/posts/{post:slug}', function (Post $post) {
 
     // $post = Post::find($id);
 
-    return view('post', ['title' => 'Singel Post', 'post' => $post]);
+
+    return view('post', ['title' => 'Singgel Post', 'post' => $post]);
 });
 
 Route::get('/authors/{user:username}', function (User $user) {
-    $posts = $user->posts->load('category', 'author');
-
-    return view('posts', ['title' => count($posts) . ' Articles by ' . $user->name, 'posts' => $posts]);
+    return view('posts', ['title' => count($user->posts) . ' Articles by ' . $user->name, 'posts' => $user->posts]);
 });
 
 Route::get('/categories/{category:slug}', function (Category $category) {
