@@ -17,7 +17,7 @@ Route::get('/about', function () {
 
 Route::get('/posts', function () {
     // $posts = Post::with(['author', 'category'])->latest()->get();
-    $posts = Post::latest()->get();
+    $post = lates()
     return view('posts', ['title' => 'Page Blog', 'posts' => $posts]);
 });
 

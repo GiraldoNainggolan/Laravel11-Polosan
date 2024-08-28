@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('home', ['title' => 'Home Page']);
+    return view('home', ['title' => 'Home Page']));
 });
 
 Route::get('/about', function () {
@@ -16,8 +16,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/posts', function () {
-    // $posts = Post::with(['author', 'category'])->latest()->get();
-    $posts = Post::latest()->get();
+    $posts = Post::with(['author', 'category'])->latest()->get();
     return view('posts', ['title' => 'Page Blog', 'posts' => $posts]);
 });
 
