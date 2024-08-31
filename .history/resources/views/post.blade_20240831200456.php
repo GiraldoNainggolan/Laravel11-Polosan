@@ -51,7 +51,8 @@
                         class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
                         {{ $post->title }}</h1>
                 </header>
-                <p>{{ $post->body }}</p>
+                <p>Before going digital, you might benefit from scribbling down some ideas in a sketchbook. This way,
+                    you can think things through before committing to an actual design project.</p>
             </article>
         </div>
     </main>

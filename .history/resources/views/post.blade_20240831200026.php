@@ -36,22 +36,26 @@
                             <div>
                                 <a href="/authors/{{ $post->author->username }}" rel="{{ $post->author->name }}"
                                     class="text-xl font-bold text-gray-900 dark:text-white">Jese Leos</a>
-                                <p class="text-base text-gray-500 dark:text-gray-400 mb-1">
+                                <p class="text-base text-gray-500 dark:text-gray-400">
                                     {{ $post->created_at->diffForHumans() }}</p>
-                                    <a href="/categories/{{ $post->category->slug }}">
-                                        <span
-                                            class="bg-{{ $post->category->color }}-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
-                                            {{ $post->category->name }}
-                                        </span>
-                                    </a>
+                                    <div class="flex justify-between items-center mb-5 text-gray-500">
+                                        <a href="/categories/{{ $post->category->slug }}">
+                                            <span
+                                                class="bg-{{ $post->category->color }}-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
+                                                {{ $post->category->name }}
+                                            </span>
+                                        </a>
+                                        <span class="text-sm">{{ $post->created_at->diffForHumans() }}</span>
+                                    </div>
                             </div>
                         </div>
                     </address>
                     <h1
                         class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
-                        {{ $post->title }}</h1>
+                        Best practices for successful prototypes</h1>
                 </header>
-                <p>{{ $post->body }}</p>
+                <p>Before going digital, you might benefit from scribbling down some ideas in a sketchbook. This way,
+                    you can think things through before committing to an actual design project.</p>
             </article>
         </div>
     </main>
