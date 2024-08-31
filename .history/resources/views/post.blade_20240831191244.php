@@ -20,14 +20,18 @@
         </a>
     </article> --}}
 
+    <!--
+Install the "flowbite-typography" NPM package to apply styles and format the article content:
+
+URL: https://flowbite.com/docs/components/typography/
+-->
 
     <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased">
         <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
             <article
-                class="mx-auto w-full max-w-4xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+                class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
                 <header class="mb-4 lg:mb-6 not-format">
-                    <a href="/posts" class="font-medium text-xs text-blue-600 hover:underline">&laquo; Back to all posts</a>
-                    <address class="flex items-center my-6 not-italic">
+                    <address class="flex items-center mb-6 not-italic">
                         <div class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
                             <img class="mr-4 w-16 h-16 rounded-full"
                                 src="https://flowbite.com/docs/images/people/profile-picture-2.jpg" alt="Jese Leos">
@@ -47,8 +51,6 @@
                 </header>
                 <p>Before going digital, you might benefit from scribbling down some ideas in a sketchbook. This way,
                     you can think things through before committing to an actual design project.</p>
-            </article>
-        </div>
-    </main>
+                /
 
 </x-layout>
