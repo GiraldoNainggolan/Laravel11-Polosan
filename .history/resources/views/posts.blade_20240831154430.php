@@ -36,13 +36,13 @@
                         </a>
                         <span class="text-sm">{{ $post->created_at->diffForHumans() }}</span>
                     </div>
-                    <a href="/posts/{{ $post->slug }}" class="hover:underline">
+                    <a href="/posts/{{ $post->slug }}">
                         <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                             {{ $post->title }}</h2>
                     </a>
                     <p class="mb-5 font-light text-gray-500 dark:text-gray-400">{{ Str::limit($post->body, 150) }}</p>
                     <div class="flex justify-between items-center">
-                        <a href="/authors/{{ $post->author->username }}">
+                        <a href="">
                         <div class="flex items-center space-x-3">
                             <img class="w-7 h-7 rounded-full"
                                 src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"

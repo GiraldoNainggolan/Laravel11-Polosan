@@ -30,13 +30,13 @@ class CategorySeeder extends Seeder
         Category::create([
             'name' => 'UI UX',
             'slug' => 'ui-ux',
-            'color' => 'blue'
+            'color' => ''
         ]);
 
         Category::create([
             'name' => 'Data Structure',
             'slug' => 'data-structure',
-            'color' => 'yellow'
+            'color' => ''
         ]);
 }
 }

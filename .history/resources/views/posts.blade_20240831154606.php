@@ -36,7 +36,7 @@
                         </a>
                         <span class="text-sm">{{ $post->created_at->diffForHumans() }}</span>
                     </div>
-                    <a href="/posts/{{ $post->slug }}" class="hover:underline">
+                    <a href="/posts/{{ $post->slug }}">
                         <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                             {{ $post->title }}</h2>
                     </a>
