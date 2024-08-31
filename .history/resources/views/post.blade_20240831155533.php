@@ -1,11 +1,11 @@
 <x-layout>
     <x-slot:title>{{ $title }}</x-slot:title>
 
-    <article class="py-8 max-w-screen-md border-b border-gray-300">
+    {{-- <article class="py-8 max-w-screen-md border-b border-gray-300">
 
         <h2 class="mb-1 text-3xl tracking-tight text-gray-900">{{ $post['title'] }}</h2>
 
-        <div class="text-base text-gray-500">
+        <div >
             By
                 <a href="/authors/{{ $post->author->username }}"
                     class="hover:underline text-base text-gray-500">{{ $post->author->name }}</a>
@@ -18,6 +18,8 @@
         </p>
         <a href="/posts/" class="font-medium text-blue-500 hover:underline">&laquo; Back to Posts
         </a>
-    </article>
+    </article> --}}
 
+
+    
 </x-layout>
