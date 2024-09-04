@@ -18,8 +18,8 @@ Route::get('/about', function () {
 Route::get('/posts', function () {
     // $posts = Post::with(['author', 'category'])->latest()->get();
 
-    dump(request('search'));
 
+    
     $posts = Post::latest()->get();
     return view('posts', ['title' => 'Page Blog', 'posts' => $posts]);
 });
