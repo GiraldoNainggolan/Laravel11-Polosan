@@ -17,12 +17,13 @@ Route::get('/about', function () {
 
 Route::get('/posts', function () {
     // $posts = Post::with(['author', 'category'])->latest()->get();
-    $posts = Post::latest();
+    $posts = Post::latest()->get();
 
     if(request('search')) {
-        $posts->where('title', 'like', '%' . request('search') . '%');
+
     }
 
+    $posts = Post::latest()->get();
     return view('posts', ['title' => 'Page Blog', 'posts' => $posts->get()]);
 });
 

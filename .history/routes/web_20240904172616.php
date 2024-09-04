@@ -20,7 +20,7 @@ Route::get('/posts', function () {
     $posts = Post::latest();
 
     if(request('search')) {
-        $posts->where('title', 'like', '%' . request('search') . '%');
+        $posts->where('title', 'like', '%' . request('search') )
     }
 
     return view('posts', ['title' => 'Page Blog', 'posts' => $posts->get()]);
