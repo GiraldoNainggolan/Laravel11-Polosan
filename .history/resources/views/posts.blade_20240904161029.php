@@ -1,10 +1,10 @@
 <x-layout>
     <x-slot:title>{{ $title }}</x-slot:title>
 
-    <div class="py-4 px-4 mx-auto max-w-screen-xl lg:px-6">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div class="mx-auto max-w-screen-md sm:text-center">
 
-            <form action="/posts" method="GET">
+            <form action="#">
                 <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
                     <div class="relative w-full">
                         <label for="email"
@@ -26,6 +26,11 @@
                             class="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Subscribe</button>
                     </div>
                 </div>
+                <div
+                    class="mx-auto max-w-screen-sm text-sm text-left text-gray-500 newsletter-form-footer dark:text-gray-300">
+                    We care about the protection of your data. <a href="#"
+                        class="font-medium text-primary-600 dark:text-primary-500 hover:underline">Read our Privacy
+                        Policy</a>.</div>
             </form>
         </div>
     </div>
