@@ -4,10 +4,8 @@
     <div class="py-4 px-4 mx-auto max-w-screen-xl lg:px-6">
         <div class="mx-auto max-w-screen-md sm:text-center">
 
-            <form>
-                @if(request('category'))
-                <input type="hidden" name="category" value="{{ request('category') }}">
-                @endif
+            <form action="/posts" method="GET">
+                
                 <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
                     <div class="relative w-full">
                         <label for="search"

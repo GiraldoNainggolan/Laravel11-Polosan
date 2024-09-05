@@ -28,16 +28,9 @@ class Post extends Model
 
     public function scopeFilter(Builder $query, array $filters): void
     {
-        $query->when(
-            $filters['search'] ?? false,
-            fn($query, $search) =>
-            $query->where('title', 'like', '%' .  $search . '%')
-        );
-
-        $query->when(
-            $filters['category'] ?? false,
-            fn($quey, $category) =>
-            $query->whereHas('category', fn($query) => $query->where('slug', $category))
-        );
+        $query->when($filters['search'] ?? false ,fn ($query, $search) {
+            $query->where('title', 'like', '%' .  request('search') . '%');
+        });
     }
+
 }

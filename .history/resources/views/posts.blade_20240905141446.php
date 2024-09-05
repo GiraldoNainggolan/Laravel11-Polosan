@@ -5,9 +5,7 @@
         <div class="mx-auto max-w-screen-md sm:text-center">
 
             <form>
-                @if(request('category'))
-                <input type="hidden" name="category" value="{{ request('category') }}">
-                @endif
+                @if(request('categories'))
                 <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
                     <div class="relative w-full">
                         <label for="search"

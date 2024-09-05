@@ -6,7 +6,7 @@
 
             <form>
                 @if(request('category'))
-                <input type="hidden" name="category" value="{{ request('category') }}">
+                <input type="hidden" name="category" value="{{ request() }}">
                 @endif
                 <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
                     <div class="relative w-full">
