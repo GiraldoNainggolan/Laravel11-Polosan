@@ -30,7 +30,9 @@ class Post extends Model
     {
         $query->when($filters['search'] ?? false ,function($query, $search) {
             $query->where('title', 'like', '%' .  request('search') . '%');
-        });
+        }) {
+        }
+        
     }
 
 }
