@@ -34,7 +34,7 @@
         </div>
     </div>
 
-    {{ $posts->links() }}
+    
 
     {{-- <section class="bg-white dark:bg-gray-900"> --}}
     <div class="py-4 px-4 mx-auto max-w-screen-xl lg:py-4 lg:px-0">
@@ -88,6 +88,5 @@
         </div>
     </div>
     {{-- </section> --}}
-    {{ $posts->links() }}
 
 </x-layout>

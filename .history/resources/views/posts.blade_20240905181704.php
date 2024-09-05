@@ -88,6 +88,5 @@
         </div>
     </div>
     {{-- </section> --}}
-    {{ $posts->links() }}
 
 </x-layout>
