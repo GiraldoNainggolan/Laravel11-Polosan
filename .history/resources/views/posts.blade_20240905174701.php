@@ -8,8 +8,8 @@
                 @if(request('category'))
                 <input type="hidden" name="category" value="{{ request('category') }}">
                 @endif
-                @if(request('author'))
-                <input type="hidden" name="author" value="{{ request('author') }}">
+                @if(request('category'))
+                <input type="hidden" name="category" value="{{ request('category') }}">
                 @endif
                 <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
                     <div class="relative w-full">
