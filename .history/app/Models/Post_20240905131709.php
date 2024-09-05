@@ -28,8 +28,7 @@ class Post extends Model
 
     public function scopeFilter(Builder $query, array $filters): void
     {
-        if(isset($filters['search']) ? $filters['search'] : false) {
-        }
+        if(isset($filre))
         $query->where('title', 'like', '%' .  request('search') . '%');
     }
 
